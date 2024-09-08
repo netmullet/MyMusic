@@ -9,11 +9,12 @@ import UIKit
 import AVFoundation
 
 class SoundPlayer: NSObject {
-    // NSDataAssetを介してAsset Catalog上の素材へアクセスできる
-    // NSDataAssetのdataプロパティで素材の生データ（Data型）にアクセスできる
+    // 音源データの読み込み
+    // NSDataAssetはAssets.xcassets内のファイルや画像を管理するクラス
+    // dataプロパティで素材の生データ（Data型）にアクセスできる
     let cymbalData = NSDataAsset(name: "cymbalSound")!.data // !で強制アンラップ
     let guitarData = NSDataAsset(name: "guitarSound")!.data
-    // オプショナル型のインスタンス変数を宣言
+    // 音源ファイルを再生する機能を持つAVAudioPlayer型のインスタンス変数
     var cymbalPlayer: AVAudioPlayer!
     var guitarPlayer: AVAudioPlayer!
     

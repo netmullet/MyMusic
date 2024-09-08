@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// extensionによって既存のクラスや構造体などに新たな定義を追加できる
 extension Image {
     func backgroundModifier() -> some View {
         // Imageのインスタンス
